@@ -45,13 +45,13 @@ exports.updateUser = (req, res, next) => {
   user.updated = Date.now();
   user.save((err) => {
     if (err) {
-      return res.status.json({
+      return res.status(400).json({
         error: 'you are not authorized to preform this action'
       });
     }
     user.hashed_password = undefined;
     user.salt = undefined;
-    res.json({ user });
+    res.json(user);
   });
 };
 
