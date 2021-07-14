@@ -1,5 +1,5 @@
-const formidable = require('formidable');
 const Post = require('../models/post');
+const formidable = require('formidable');
 const fs = require('fs');
 const _ = require('lodash');
 
